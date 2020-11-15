@@ -1,0 +1,5 @@
+#!/bin/bash
+recipient=”admin@example.com”
+subject=”Welcome”
+message=”Welcome to MyGitHub”
+`mail -s $subject $recipient <<< $message
