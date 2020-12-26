@@ -1,0 +1,51 @@
+ls -d D*
+command list files that starts with D.
+*s
+List file that ends with s.
+
+
+->grep "c.t" /usr/share/dict/american-english
+Provides result of words like cat,cut,c2t means match any 1 word between c and t.
+[a-c]at = bat,cat
+
+[0-9][0-9] = 2 numbers ie, 23 45 67
+
+grep "c[aeiou]t" /usr/share/dict/american-english
+->search of words that has vowels between c and t.
+
+^s = only that starts with s
+$s = only that end with s.
+
+an\b = match "an" word at boundry.
+ex. Rohan, Kanan, chhagan
+
+when you dont want to put character as a special character, just put / before 
+it. For ex: grep "c.t" will search for cat,cut etc. but grep "c/.t" will search for c.t word.
+
+bo?t = ? means 0 or 1, so it will search like bt, bot. results
+likewise, + means 1 or more.
+* means 0,1 or more.
+
+---------------------------------------------------------------------
+
+Redirection:
+
+ls -l > output.txt
+this command will redirect output of ls command to output.txt file.
+
+ls /etc >> output.txt
+this command will append the output.txt means add new contains at the end of file.
+
+cat emails.txt names.txt > emailsANDnames.txt
+This command will combine both file contains and transfer it to emailsAndnames.txt file.
+
+0=stdin, 1=stdout, 2=stderror
+
+Pipping is feature that provide input of other command to output of other command.
+ls -1 | wc
+above command will count the number of file in current directory and provides number as output.
+
+tee command:
+this command is used to display output in command line as wll as in output file also.
+ex--ls -1 | tee output.txt
+
